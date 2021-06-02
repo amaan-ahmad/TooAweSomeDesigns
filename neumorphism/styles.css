@@ -1,0 +1,83 @@
+:root {
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+
+  --white: #ffffff;
+  --greyLight-1: #e4ebf5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+}
+
+body {
+  background-color: var(--greyLight-2);
+}
+
+.row,
+.col {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.container {
+  margin: 1rem 2rem;
+  padding: 4rem;
+  min-width: 70%;
+  min-height: 500px;
+  border-radius: 1rem;
+  background-color: var(--greyLight-2);
+  box-shadow: 6px 6px 20px -2px var(--greyDark),
+    -6px -6px 14px -2px var(--white);
+}
+
+.switch {
+  display: flex;
+  flex-direction: row;
+  width: 70px;
+  border-radius: 20pc;
+  padding: 0.4rem;
+  will-change: auto;
+  background: var(--greyLight-2);
+  box-shadow: 6px 6px 20px -2px var(--greyDark),
+    -6px -6px 14px -2px var(--white);
+  transition: background 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.switch-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  will-change: auto;
+  background-color: var(--greyDark);
+  transition: all 0.4s;
+}
+
+.switch.on {
+  background: linear-gradient(
+    140deg,
+    var(--primary-light),
+    var(--primary-dark)
+  );
+}
+
+.switch.on > .switch-circle {
+  transform: translate(190%, 0);
+  background-color: var(--white);
+}
